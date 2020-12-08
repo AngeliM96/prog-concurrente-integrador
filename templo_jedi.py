@@ -6,7 +6,7 @@ import sys
 
 logging.basicConfig(format='%(asctime)s.%(msecs)03d [%(threadName)s] - %(message)s', datefmt='%H:%M:%S', level=logging.INFO)
 
-cantidad_candidatos = 10
+cantidad_candidatos = 15
 cantidad_maestros_jedi = 3
 # Los niños que llegan para ser entrenados van a ser una lista
 candidatos = []
@@ -119,7 +119,10 @@ class MaestroJedi(threading.Thread):
                 time.sleep(2)
                 sys.exit()
             else:
-                self.entrenarPadawan(padawans[0])
+                if self.llegueAMiCapacidad():
+                    semaforo_entrenamiento.release()
+                else:
+                    self.entrenarPadawan(padawans[0])
 
 GranMaestroJedi().start()
 

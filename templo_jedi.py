@@ -6,14 +6,16 @@ import sys
 
 logging.basicConfig(format='%(asctime)s.%(msecs)03d [%(threadName)s] - %(message)s', datefmt='%H:%M:%S', level=logging.INFO)
 
+# Las cantidades son variables para poder ser modificadas fácilmente
 cantidad_candidatos = 15
 cantidad_maestros_jedi = 3
-# Los niños que llegan para ser entrenados van a ser una lista
+# Los niños que llegan para ser evaluados van a ser una lista
 candidatos = []
 # Y los que son aceptados se ponen en otra
 padawans = []
 # El monitor para sincronizar quien está enseñando
 monitor_evaluacion = threading.Condition()
+# El semaforo para que solo haya un maestro ensenando a la vez
 semaforo_entrenamiento = threading.Semaphore(1)
 
 class Candidato(threading.Thread):
@@ -108,6 +110,7 @@ class MaestroJedi(threading.Thread):
 
     def noHayNadieParaEntrenar(self):
         return len(padawans) == 0
+        
     def llegueAMiCapacidad(self):
         return self.padawans_entrenados == self.cuantos_padawans
 

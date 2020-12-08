@@ -22,7 +22,7 @@ La fecha máxima de entrega es el Domingo 13/Dic 23:59 hs.
 
 # Problema inventado basado en Star Wars
 Estaba viendo de nuevo las películas de Star Wars y se me ocurrió que podía utilizarlo para aplicar la concurrencia, mi idea es la siguiente:
-Tenemos a los Jedi, unos guerreros místicos que se encargan de mantener la paz de la galaxia. Estos guerreros tienen templos en los que entrenan a niños para enseñarles a combatir y a utilizar la fuerza (la fuerza siendo una energía que existe alrededor de todos los seres a lo largo de todo el universo, la cual les otorga varios poderes distintos que no vienen al caso).
+Tenemos a los Jedi, unos guerreros místicos que se encargan de mantener la paz de la galaxia. Estos guerreros tienen templos en los que entrenan a niños para enseñarles a combatir y a utilizar la fuerza (la fuerza siendo una energía que existe alrededor de todos los seres a lo largo de todo el universo, la cual les otorga varios poderes distintos que no vienen al caso) y se necesita poder sincronizar para entrenarlos en orden y que no sea un caos.
 
 ## El programa
 La idea es que haya un Gran Maestro Jedi que va aceptando, o rechazando, a los niños que llegan. Cuando se acepta a un candidato se lo pasa a llamar padawan, un aprendiz de Jedi, y se le avisa a un maestro para que lo entrene. Cada maestro puede entrenar solo a un padawan a la vez y puede entrenar a una cantidad aleatoria antes de ser reemplazado por otro maestro. Para decidir si se puede entrenar a un candidato, hay ciertas condiciones.

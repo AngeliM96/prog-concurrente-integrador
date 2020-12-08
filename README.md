@@ -34,3 +34,10 @@ Esto significa, que sus midiclorianos (los midiclorianos son, a nivel celular, l
 No se puede entrenar a alguien que tiene sentimientos negativos porque hay un gran riesgo de que se pase al lado oscuro (osea, que se convierta en malo, básicamente). Sentimientos negativos sería que una persona sea propenso a la ira o tenga miedos de algo (como dijo el Gran Maestro Yoda, "El miedo es el camino hacia el Lado Oscuro. El miedo lleva a la ira, la ira lleva al odio, el odio, lleva al sufrimiento"). Esto lo podemos representar con un valor del 1 al 10, si se excede de 6, se considera al niño como "Propenso al lado oscuro".
 ### Excepción
 Si un niño tiene una cantidad de midiclorianos mucho más alta que lo normal, se puede hacer una excepción. Esto sería si sus midiclorianos son mayores a 18000.
+
+# ¿Por qué es necesaria la concurrencia?
+En este problema utilizamos un monitor, un semaforo, y listas, para asegurarnos de evaluar en orden a los candidatos y no intentar evaluar a más de uno a la vez. O asegurarnos de que dos maestros no estén entrenando a un candidato a la vez.
+
+# Material utilizado
+- Para elegir el problema me inspiré viendo la película "A Phantom Menace", primer película de la trilogía de precuelas de Star Wars.
+- Para los números de los midiclorianos, utilizados en las condiciones de la evaluación, busqué información [acá](https://screenrant.com/star-wars-questions-midichlorians-answered/)
